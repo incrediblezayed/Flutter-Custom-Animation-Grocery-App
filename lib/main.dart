@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             shape: StadiumBorder(),
             backgroundColor: primaryColor,
           ),
-        ),
+        ),                
       ),
       home: HomeScreen(),
     );

@@ -14,15 +14,15 @@ class HomeController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void addProductToCart(Product product) {
-    for (ProductItem item in cart) {
+  void addProductToCart(Product product, int quantity) {
+    for (ProductIte m item in cart) {
       if (item.product!.title == product.title) {
-        item.increment();
+        for (int a = 0; a < quantity; a++) item.increment();
         notifyListeners();
         return;
       }
     }
-    cart.add(ProductItem(product: product));
+    cart.add(ProductItem(product: product, quantity: quantity));
     notifyListeners();
   }
 

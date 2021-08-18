@@ -12,7 +12,7 @@ class DetailsScreen extends StatefulWidget {
       : super(key: key);
 
   final Product product;
-  final VoidCallback onProductAdd;
+  final Function(int) onProductAdd;
 
   @override
   _DetailsScreenState createState() => _DetailsScreenState();
@@ -20,6 +20,18 @@ class DetailsScreen extends StatefulWidget {
 
 class _DetailsScreenState extends State<DetailsScreen> {
   String _cartTag = "";
+  int counter = 1;
+  void action(bool value) {
+    if (value) {
+      counter++;
+    } else {
+      if (counter > 1) {
+        counter--;
+      }
+    }
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +39,11 @@ class _DetailsScreenState extends State<DetailsScreen> {
         child: SizedBox(
           width: double.infinity,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            padding: const EdgeInsets.symmetric(
+                horizontal: defaultPadding, vertical: 4),
             child: ElevatedButton(
               onPressed: () {
-                widget.onProductAdd();
+                widget.onProductAdd(counter);
                 setState(() {
                   _cartTag = '_cartTag';
                 });
@@ -61,7 +74,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 ),
                 Positioned(
                   bottom: -20,
-                  child: CartCounter(),
+                  child: CartCounter(
+                    counter: counter,
+                    action: action,
+                  ),
                 )
               ],
             ),

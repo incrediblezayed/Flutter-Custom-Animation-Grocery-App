@@ -4,7 +4,7 @@ class Product {
   Product({this.title, this.image});
 }
 
-List<Product> demo_products = [
+List<Product> demoProducts = [
   Product(title: "Cabbage", image: "assets/images/img_1.png"),
   Product(title: "Broccoli", image: "assets/images/img_2.png"),
   Product(title: "Carrot", image: "assets/images/img_3.png"),
