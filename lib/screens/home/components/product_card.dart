@@ -1,6 +1,7 @@
 import 'package:animation_2/components/fav_btn.dart';
 import 'package:animation_2/components/price.dart';
 import 'package:animation_2/models/Product.dart';
+// ignore: unused_import
 import 'package:animation_2/screens/deatils/details_screen.dart';
 import 'package:flutter/material.dart';
 

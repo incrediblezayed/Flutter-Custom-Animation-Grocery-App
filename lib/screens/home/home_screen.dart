@@ -2,7 +2,6 @@ import 'package:animation_2/constants.dart';
 import 'package:animation_2/controllers/home_controller.dart';
 import 'package:animation_2/models/Product.dart';
 import 'package:animation_2/screens/deatils/details_screen.dart';
-import 'package:animation_2/screens/home/components/cart_detailsview_card.dart';
 import 'package:flutter/material.dart';
 
 import 'components/cart_details_view.dart';
