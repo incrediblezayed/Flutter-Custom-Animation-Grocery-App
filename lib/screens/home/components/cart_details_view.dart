@@ -27,7 +27,8 @@ class CartDetailsView extends StatelessWidget {
               onPressed: () {},
               child: Text("Next - \$30"),
             ),
-          )
+          ),
+          Image.asset('assets/images/map.png')
         ],
       ),
     );

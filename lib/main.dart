@@ -1,4 +1,5 @@
 import 'package:animation_2/screens/home/home_screen.dart';
+import 'package:animation_2/screens/home/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,9 +24,9 @@ class MyApp extends StatelessWidget {
             shape: StadiumBorder(),
             backgroundColor: primaryColor,
           ),
-        ),                
+        ),
       ),
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }

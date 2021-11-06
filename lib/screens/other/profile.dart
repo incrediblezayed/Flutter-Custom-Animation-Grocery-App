@@ -1,6 +1,7 @@
 import 'package:animation_2/components/profile_circle_avatar.dart';
 import 'package:animation_2/constants.dart';
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:flutter/services.dart';
 
 class ProfileScreen extends StatelessWidget {
