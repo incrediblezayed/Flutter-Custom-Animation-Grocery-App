@@ -15,7 +15,7 @@ class HomeController extends ChangeNotifier {
   }
 
   void addProductToCart(Product product, int quantity) {
-    for (ProductIte m item in cart) {
+    for (ProductItem item in cart) {
       if (item.product!.title == product.title) {
         for (int a = 0; a < quantity; a++) item.increment();
         notifyListeners();
